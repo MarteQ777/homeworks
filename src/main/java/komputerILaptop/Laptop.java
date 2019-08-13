@@ -23,12 +23,7 @@ public class Laptop extends Komputer{
 
     @Override
     public String toString() {
-        return "Laptop{" +
-                "potrzebaMoc=" + getPotrzebnaMoc() +
-                "producent=" +getProducent() +
-                "typProcesora" + getTypProcesora() +
-                "wielkoscMatrycy=" + wielkoscMatrycy +
-
-                '}';
+        return "Rodzaj sprzętu: Laptop, producent: " + getProducent() +
+                ", typ procesora" + getTypProcesora() + " zapotrzebowanie na moc: " + getPotrzebnaMoc() + " wielkość matrycy " + wielkoscMatrycy;
     }
 }
