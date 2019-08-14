@@ -1,4 +1,4 @@
-package komputerILaptop;
+package komputerilaptop;
 
 public class Laptop extends Komputer{
     protected Laptop(int potrzebnaMoc, String producent, TypProcesora typProcesora, double wielkoscMatrycy, boolean czyPosiadaRetine) {

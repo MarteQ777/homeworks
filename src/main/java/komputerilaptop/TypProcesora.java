@@ -1,4 +1,4 @@
-package komputerILaptop;
+package komputerilaptop;
 
 public enum TypProcesora {
 

@@ -1,4 +1,4 @@
-package komputerILaptop;
+package komputerilaptop;
 
 public class Main {
     public static void main(String[] args) {

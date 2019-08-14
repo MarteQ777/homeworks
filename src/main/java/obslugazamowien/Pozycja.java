@@ -1,4 +1,4 @@
-package obslugaZamowien;
+package obslugazamowien;
 
 public class Pozycja {
 

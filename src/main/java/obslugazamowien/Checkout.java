@@ -1,4 +1,4 @@
-package obslugaZamowien;
+package obslugazamowien;
 
 public class Checkout {
     public static void main(String[] args) {
