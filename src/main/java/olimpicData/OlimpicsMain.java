@@ -1,4 +1,4 @@
-package zadania_streamy_generyki;
+package olimpicData;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,13 +12,16 @@ public class OlimpicsMain {
 
     final OlimpicsDataService olimpicsDataService = new OlimpicsDataService();
 
-    //final List<OlimpicsData> olimpicsDataList = olimpicsDataService.processDataFromFile(filePath);
+    final List<OlimpicsData> olimpicsDataList = olimpicsDataService.processDataFromFile(filePath);
 
-    final OlimpicDataStatistics countriesWithAtLeastOneGoldMedal = new OlimpicDataStatistics();
+    final OlimpicDataStatistics olimpicDataStatistics = new OlimpicDataStatistics();
 
 
-   // countriesWithAtLeastOneGoldMedal.findAllCountriesWithAtLeastOneGoldMedal(olimpicsDataList)
-   //         .forEach(System.out::println);
+        System.out.println(olimpicDataStatistics.totalAmountOfMedals(olimpicsDataList));
+
+        //   countriesWithAtLeastOneGoldMedal.findAllCountriesWithAtLeastOneGoldMedal(olimpicsDataList)
+   //   .forEach(System.out::println);
+
 
 
     }

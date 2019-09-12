@@ -1,5 +1,8 @@
-package zadania_streamy_generyki;
+package olimpicData;
 
+import lombok.Builder;
+
+@Builder
 public class OlimpicsData {
 
 private String countryShortName;
