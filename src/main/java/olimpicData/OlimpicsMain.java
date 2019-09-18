@@ -9,6 +9,7 @@ public class OlimpicsMain {
 
     final String filePath = args[0]; // żeby plik był argumentem wejścia do programu - klikasz powyżej w nazwę pliku przy młotku
                                         // klikasz edit configuration i w program arguments dodajesz ścieżkę + nazwa pliku \
+    final String outputFile = args[1];
 
     final OlimpicsDataService olimpicsDataService = new OlimpicsDataService();
 
@@ -16,15 +17,14 @@ public class OlimpicsMain {
 
     final OlimpicDataStatistics olimpicDataStatistics = new OlimpicDataStatistics();
 
+    final OlimpicsDataWriter olimpicsDataWriter = new OlimpicsDataWriter();
 
-        System.out.println(olimpicDataStatistics.findCountryWithMostMedalsInTotal(olimpicsDataList));
-
-
-        //System.out.println(olimpicDataStatistics.reverseSortedListOfCountriesWithSilverMedals(olimpicsDataList));
+    olimpicsDataWriter.safe2File(outputFile, olimpicsDataList);
 
 
-    }
+
 
     }
 
+    }
 

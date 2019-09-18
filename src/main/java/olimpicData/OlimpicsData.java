@@ -2,6 +2,8 @@ package olimpicData;
 
 import lombok.Builder;
 
+import java.util.List;
+
 @Builder
 public class OlimpicsData {
 
@@ -39,4 +41,14 @@ private int fourthPlace;
     public int getFourthPlace() {
         return fourthPlace;
     }
+
+  //  public int getTotalAmountOfMedals(){
+  //      return getGoldMedals()+getSilverMedals()+getBronzeMedals();
+  //  }
+    public int getPointsFromMedals(){
+        return getGoldMedals()*3 + getSilverMedals()*2 + getBronzeMedals();
+
+    }
+
 }
+
