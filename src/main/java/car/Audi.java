@@ -1,7 +1,10 @@
 package car;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Random;
 
+@Slf4j
 public class Audi implements Car {
 
     private String model;
@@ -15,6 +18,9 @@ public class Audi implements Car {
         this.broken = broken;
     }
 
+    public boolean getBroken() {
+        return broken;
+    }
 
     @Override
     public String getModel() {
@@ -34,23 +40,36 @@ public class Audi implements Car {
     @Override
     public boolean isBroken() {
         if (broken) {
+            log.warn(this.model + " Przy odpalaniu padł silnik");
             return broken;
+
         }
         broken = new Random().nextBoolean();
+        if (broken) {
+            System.out.println(this.getModel() + " No i dupa, przy odpalaniu padł silnik ");
+            log.warn(this.model + " Przy odpalaniu padł silnik");
+        } else {
+            System.out.println(this.getModel() + " Swietnie, silnik wystartował");
+            log.info(this.model + " Pojazd uruchomiony");
+        }
         return broken;
     }
+
+        public void setBroken ( boolean broken){
+            this.broken = broken;
+        }
 
 
     @Override
     public void startEngine() {
-        System.out.println("Ignition");
+        System.out.println(this.getModel() + " Zapłon");
         isBroken();
+    }
+
+    @Override
+    public void fixCar() {
         if (broken) {
-            System.out.println("Engine`s dead. Do not try to start it again. Tow car or call mechanic");
-        } else {
-            System.out.println("Engine is on");
-
+            setBroken(false);
         }
-
     }
 }
