@@ -6,16 +6,11 @@ import java.io.IOException;
 
 public class LogWriter {
 
-    BufferedWriter logWriter;
-
-    {
-        try {
-            logWriter = new BufferedWriter(new FileWriter("logs.txt"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+   BufferedWriter logWriter = new BufferedWriter(new FileWriter("CarParkLogs.txt"));
 
 
+    public LogWriter() throws IOException {
     }
-
 }
+
+

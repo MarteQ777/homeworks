@@ -26,7 +26,8 @@ public class Mechanic {
                 log.info(car.getModel() + " został naprawiony przez mechanika " + this.imie + this.nazwisko);
             } else {
                 System.out.println("Mechanik " + imie + " " +  nazwisko + " No nie udało mi się kochaniutka, pani " + car.getModel() + " , trzeba odcholować z parkingu");
-                log.warn(car.getModel() + " nie został naprawiony przez " + this.imie +" "+ this.nazwisko + ". Pojazd wymaga odcholowania.");
+              log.warn(car.getModel() + " nie został naprawiony przez " + this.imie +" "+ this.nazwisko + ". Pojazd wymaga odcholowania.");
+
             }
 
         }
